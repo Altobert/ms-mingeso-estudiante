@@ -1,47 +1,27 @@
 package cl.usach.mingso.entity;
 
-import org.springframework.data.annotation.Id;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.antlr.v4.runtime.misc.NotNull;
+
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "estudiante")
-@Data
-@AllArgsConstructor
+@Table(name = "estudiantes")
 @NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Estudiante {
-	
-	@EmbeddedId	
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	@Column(name = "rut")
-	private Integer rut; 
-	 
-	@Column(name = "apellidos")
-	private String apellidos;
-	 
-	@Column(name = "nombres")
-	private String nombres;
-	 
-	@Column(name = "fcnacimiento")
-	private String fechaNacimiento;
-	 
-	@Column(name = "tipocolegio")
-	private String tipoColegio;
-	 
-	@Column(name = "nombrecolegio")
-	private String nombreColegio;
-	
-	@Column(name = "añoegreso")
-	private Integer añoEgresoColegio;
-
+    @Id
+    @NotNull
+    private String rut;
+    private String nombres;
+    private String apellidos;
+    private LocalDate fecha_nacimiento;
+    private int tipo_colegio;
+    private String nombre_colegio;
+    private LocalDate anio_egreso;
+    private LocalDate anio_ingreso;
 }
