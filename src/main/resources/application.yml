@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: topeducation
+    name: mingso
   jpa:
     database: POSTGRESQL
     show-sql: true
@@ -13,7 +13,7 @@ spring:
     plataform: postgres
     driver-class-name: org.postgresql.Driver
     dbname: topeducation
-    url: jdbc:postgresql://localhost:5433/topeducation
+    url: jdbc:postgresql://localhost:5432/topeducation
     username: postgres
     password: 270980
   servlet:

@@ -1,4 +1,4 @@
-version: "3.8"
+version: "2.2"
 services:
   nginx:
     image: nginx:latest
@@ -9,8 +9,8 @@ services:
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
-      - topeducation1
-      - topeducation2
+      - mingso1
+      - mingso2
 
   postgres-db:
     image: postgres:latest
@@ -19,14 +19,14 @@ services:
       - ./data/db:/var/lib/postgresql
     environment:
       POSTGRES_DB: topeducation
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: 270980
+      POSTGRES_PASSWORD: 270980
+      POSTGRES_USER: postgres
     ports:
       - "5432:5432"
 
-  topeducation1:
-    container_name: project-topeducation1
-    image: altobert/topeducation
+  mingso1:
+    container_name: project-mingso1
+    image: altobert/mingso
     ports:
       - "8091:8090"
     environment:
@@ -39,10 +39,9 @@ services:
         condition: on-failure
     depends_on:
       - postgres-db
-      
-  topeducation2:
-    container_name: project-topeducation2
-    image: simonsaez/project-topeducation
+  mingso2:
+    container_name: project-mingso2
+    image: altobert/mingso
     ports:
       - "8092:8090"
     environment:
