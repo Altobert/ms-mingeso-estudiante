@@ -14,8 +14,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Data
 public class Estudiante {
-    @Id
-    @NotNull
+	
+    @Id    
     private String rut;
     private String nombres;
     private String apellidos;
