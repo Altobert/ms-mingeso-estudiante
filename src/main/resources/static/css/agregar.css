@@ -28,14 +28,15 @@ input[type="text"]{
 }
 
 input[type="submit"], #Generar_cuotas{
-    color: #fff;
+    color: #4caf50;
     margin-left: 5px;
     padding: 8px 20px;
     font-size: 16px;
     border-radius: 30px;
-    border: none;
+    border: thick;
     cursor: pointer;
 }
+
 #Generar, #Generar_cuotas{
     background-color: #4caf50;
 }

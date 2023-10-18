@@ -12,8 +12,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="../static/css/agregar.css" type="text/css" th:href="@{/css/agregar.css}" />
-        <link rel="stylesheet" href="../static/css/navbar.css" type="text/css" th:href="@{/css/navbar.css}" />
+        <!--
+        	<link rel="stylesheet" href="../static/css/agregar.css" type="text/css" th:href="@{/css/agregar.css}" /> 
+         -->        
+        <link rel="stylesheet" href="../static/css/agregar.css" type="text/css"  th:href="@{/css/agregar.css}"/>	
+        <link rel="stylesheet" href="../static/css/navbar.css"  type="text/css"  th:href="@{/css/navbar.css}"/>
         <script>
             function navegar(lugar) {
                 location.href = lugar;
@@ -24,7 +27,7 @@
     <body>
         <header class="header">
             <div class="logo">
-                <h1 onclick="navegar('/')">Top Education</h1>
+                <h1 onclick="navegar('/')">Sistema Top Education</h1>
             </div>
             <a class="btn" href="/"><button>Volver al menú principal</button></a>
             <a class="btn" href="/lista_estudiante"><button>Lista Estudiante</button></a>

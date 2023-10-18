@@ -1,7 +1,5 @@
 package cl.usach.mingso.entity;
 
-import org.antlr.v4.runtime.misc.NotNull;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -16,8 +14,19 @@ import lombok.NoArgsConstructor;
 @Data
 public class TipoColegio {
 
-    @Id
-    @NotNull
-    private int id;
+    @Id    
+    private Integer id;
     private String tipo;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 }
